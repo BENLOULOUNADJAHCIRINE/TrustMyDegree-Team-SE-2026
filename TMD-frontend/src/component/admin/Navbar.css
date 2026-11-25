@@ -1,0 +1,183 @@
+/*main div*/
+.navbar {
+  height: 100%;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 0px;
+  background-color: #0f1e3f;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/*the main nav div*/
+
+nav {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+nav > a {
+  text-decoration: none;
+}
+nav > a:hover {
+  text-decoration: none;
+}
+
+/* top logo*/
+.logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+}
+.logo img {
+  width: 40px;
+  height: 40px;
+}
+.logo-text {
+  margin-left: 10px;
+}
+.logo-text h1 {
+  color: white;
+  font-size: 18px;
+  position: relative;
+  top: 8px;
+}
+
+.logo-text h1 .span {
+  color: blue;
+}
+.logo-text p {
+  color: blue;
+  font-size: 15px;
+  position: relative;
+  bottom: 9px;
+  text-align: start;
+}
+
+/*buttons*/
+
+.nav-links {
+  height: 85%;
+  padding: 10px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.nav-links a {
+  font-size: 15px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 10px;
+  margin-bottom: 30px;
+  color: white;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: background 0.2s;
+}
+
+.nav-links a img {
+  width: 20px;
+  height: 20px;
+}
+
+.nav-links a:hover {
+  background-color: #ffffff26;
+  border-radius: 20px;
+}
+
+.nav-links a:focus {
+  background-color: #ffffff26;
+  border-radius: 20px;
+}
+
+.same {
+  color: white;
+  font-size: 17px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.out {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  color: white;
+  border-radius: 20px;
+  transition: background 0.2s;
+  cursor: pointer;
+}
+
+.out > img {
+  width: 20px;
+  height: 20px;
+}
+
+.out:hover {
+  background-color: #ffffff26;
+}
+
+.logout {
+  font-size: 17px;
+  cursor: pointer;
+}
+
+/*responsive*/
+/* hamburger button — hidden on desktop */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 100;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    position: relative;
+    padding: 5px 20px;
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hamburger {
+    display: flex;
+    position: static; /* remove absolute positioning */
+    align-self: flex-end;
+    margin-bottom: 0;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    padding-top: 50px;
+  }
+
+  nav.open {
+    display: flex;
+  }
+}
